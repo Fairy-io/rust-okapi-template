@@ -1,4 +1,4 @@
-use crate::db::models::*;
+use crate::models::*;
 use rocket::{get, serde::json::Json};
 
 #[get("/todos")]
