@@ -11,7 +11,9 @@ Run following command to enable watch mode:
 cargo install cargo-watch
 ```
 
-##
+[Install visual studio code extension for rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+
+## Commands
 
 In order to start application in watch mode:
 ```sh
