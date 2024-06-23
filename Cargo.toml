@@ -7,7 +7,6 @@ edition = "2021"
 rocket = { version = "0.5.1", features = ["json"] }
 serde = { version = "1.0", features = ["derive"] }
 diesel = { version = "2.2.0", features = ["postgres", "sqlite"] }
-dotenvy = "0.15"
 
 [features]
 rust_analyzer_only = []
