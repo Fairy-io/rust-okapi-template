@@ -5,13 +5,10 @@
 // https://github.com/diesel-rs/diesel/issues/2085
 // https://stackoverflow.com/questions/59228152/rust-diesel-cli-setting-up-multiple-env-files-for-different-environments
 
-use diesel::*;
-
-table! {
+diesel::table! {
     todos (id) {
         id -> Varchar,
         text -> Text,
-        done -> Bool,
-        done2 -> Bool,
+        done -> Bool
     }
 }
