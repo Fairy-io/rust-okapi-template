@@ -13,14 +13,24 @@ cargo install cargo-watch
 
 [Install visual studio code extension for rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
 
+Run following command to install diesel cli:
+```sh
+cargo install diesel_cli --no-default-features --features postgres-bundled --features sqlite-bundle
+```
+
 ## Commands
 
-In order to start application in watch mode:
+In order to start application in dev mode:
 ```sh
-cargo-watch -x run
+./run.sh dev
 ```
 
 To run tests:
 ```sh
-cargo-watch -x test
+./run.sh test
 ```
+
+## Recommended programs
+
+- Visual Studio Code for file edits
+- [TablePlus](https://tableplus.com) for databases
