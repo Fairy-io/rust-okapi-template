@@ -15,7 +15,7 @@ cargo install cargo-watch
 
 Run following command to install diesel cli:
 ```sh
-cargo install diesel_cli --no-default-features --features postgres-bundled --features sqlite-bundle
+cargo install diesel_cli --no-default-features --features postgres-bundled --features sqlite-bundled
 ```
 
 ## Commands
@@ -30,7 +30,9 @@ To run tests:
 ./run.sh test
 ```
 
-## Recommended programs
+## Recommended addons
 
-- Visual Studio Code for file edits
-- [TablePlus](https://tableplus.com) for databases
+- [Visual Studio Code](https://code.visualstudio.com/download) for file edits
+- [TablePlus](https://tableplus.com) for database view
+- [Docker](https://docs.docker.com/engine/install/) to set up database with command `docker-compose up -d`
+- [Rust analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
