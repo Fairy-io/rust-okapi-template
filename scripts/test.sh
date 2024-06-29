@@ -1,2 +1,4 @@
-./scripts/init.sh "test"
+#!/bin/bash
+
+. ./scripts/init.sh "test"
 cargo test 

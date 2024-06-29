@@ -18,7 +18,7 @@ load_envs() {
         env_file=".env"
     fi
 
-    if [ -f "test.db" ]; then
+    if [ -f "$env_file" ]; then
         export $(grep -v "^#" "$env_file" | xargs)
     fi
 
