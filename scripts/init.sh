@@ -21,6 +21,11 @@ load_envs() {
     if [ -f "test.db" ]; then
         export $(grep -v "^#" "$env_file" | xargs)
     fi
+
+    if [ "$OS_TYPE" == "mac" ]; then
+        QL_LIB=$(brew --prefix libpq)
+        export PQ_LIB_DIR="$QL_LIB/lib"
+    fi
 }
 
 clear_empty_migrations() {
