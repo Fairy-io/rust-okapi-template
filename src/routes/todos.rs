@@ -1,16 +1,12 @@
-use crate::models::*;
-use rocket::{get, serde::json::Json};
+use crate::{
+    db::connection::ConnectionPool, models::*, repositories::todo_repository::repository_get_todos,
+};
+use rocket::{get, serde::json::Json, State};
+use std::sync::Arc;
 
 #[get("/todos")]
-pub fn get_todos() -> Json<Vec<Todo>> {
-    Json(vec![
-        Todo {
-            text: "123".to_string(),
-            done: true,
-        },
-        Todo {
-            text: "456".to_string(),
-            done: false,
-        },
-    ])
+pub async fn get_todos(db_pool: &State<Arc<ConnectionPool>>) -> Json<Vec<Todo>> {
+    let todos = repository_get_todos(db_pool).await;
+
+    Json(todos)
 }
