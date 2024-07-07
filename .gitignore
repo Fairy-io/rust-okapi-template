@@ -1,0 +1,6 @@
+/target
+Cargo.lock
+.env
+test.db
+/migrations/**/*_migration
+/migrations_test/**/*_migration
